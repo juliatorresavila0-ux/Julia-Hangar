@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangar · Julia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hangar.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="scanlines"></div>
+  <main class="painel-hangar">
+    <header class="topo">
+      <div class="logo-mini">✦</div>
+      <div>
+        <p class="sistema">FRONTEIRA KAIJU // HANGAR</p>
+        <h1>Hangar · Julia</h1>
+        <p class="subtitulo">Ficha de combate em sincronização</p>
+      </div>
+      <div class="online"><span class="bolinha"></span>PILOTO ONLINE</div>
+    </header>
+
+    <section class="briefing">
+      <strong>💗 OBJETIVO DESTE PAINEL</strong>
+      <p>Visualize a piloto Julia, o Mecha, os atributos principais e as 13 cartas de ataque disponíveis para a missão.</p>
+    </section>
+
+    <section class="fichas-visuais">
+      <article class="visual-card">
+        <div class="rotulo-card"><span>MECHA</span><strong>MK-PINK</strong></div>
+        <div class="imagem-area">
+          <span class="scan-imagem"></span>
+          <div class="moldura-canto canto-1"></div><div class="moldura-canto canto-2"></div><div class="moldura-canto canto-3"></div><div class="moldura-canto canto-4"></div>
+          <img id="img-robo" src="img/mecha.png" alt="Mecha padrão">
+        </div>
+        <div class="controles" data-grupo="robo">
+          <button class="ativo" data-lado="frente">FRENTE</button><button data-lado="direita">DIREITA</button><button data-lado="esquerda">ESQUERDA</button><button data-lado="costas">COSTAS</button>
+        </div>
+      </article>
+
+      <article class="visual-card">
+        <div class="rotulo-card"><span>PILOTO</span><strong>JULIA</strong></div>
+        <div class="imagem-area">
+          <span class="scan-imagem"></span>
+          <div class="moldura-canto canto-1"></div><div class="moldura-canto canto-2"></div><div class="moldura-canto canto-3"></div><div class="moldura-canto canto-4"></div>
+          <img id="img-piloto" src="img/personagem.png" alt="Piloto Julia">
+        </div>
+        <div class="controles" data-grupo="piloto">
+          <button class="ativo" data-lado="frente">FRENTE</button><button data-lado="direita">DIREITA</button><button data-lado="esquerda">ESQUERDA</button><button data-lado="costas">COSTAS</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="atributos">
+      <article class="atributo"><span class="icone">💥</span><span class="atributo-nome">Dano Extra</span><span class="atributo-valor">2</span></article>
+      <article class="atributo"><span class="icone">💖</span><span class="atributo-nome">Vida</span><span class="atributo-valor">30</span></article>
+      <article class="atributo"><span class="icone">⚡</span><span class="atributo-nome">Agilidade</span><span class="atributo-valor">3</span></article>
+      <article class="atributo"><span class="icone">🛡️</span><span class="atributo-nome">Defesa</span><span class="atributo-valor">1</span></article>
+    </section>
+
+    <div class="linha-titulo"><h2>🃏 Cartas de Ataque</h2><span>13 CARTAS CARREGADAS</span></div>
+    <section id="cartas" class="cartas-grid"></section>
+
+    <footer><span>JULIA // MK-PINK</span><span>♥ SISTEMA ESTÁVEL ♥</span></footer>
+  </main>
+  <script src="hangar.js"></script>
+</body>
+</html>
