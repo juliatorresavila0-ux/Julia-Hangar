@@ -13,10 +13,10 @@ const imagens = {
   },
 
   piloto: {
-    frente: "img/julia-frente.png",
-    direita: "img/julia-direita.png",
-    esquerda: "img/julia-esquerda.png",
-    costas: "img/julia-costas.png"
+    frente: "img/personagem.png",
+    direita: "img/personagem-d.png",
+    esquerda: "img/personagem-e.png",
+    costas: "img/personagem-a.png"
   }
 };
 
