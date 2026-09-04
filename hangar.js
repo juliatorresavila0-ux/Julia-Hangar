@@ -4,3 +4,42 @@ const cartas=[
 const grid=document.getElementById("cartas");
 cartas.forEach(c=>{const el=document.createElement("article");el.className="carta";el.innerHTML=`<span class="carta-valor">${c.valor}</span><span class="carta-nome">${c.nome}</span><span class="carta-dano">Dano: <strong>${c.dano}</strong></span>`;grid.appendChild(el);});
 document.querySelectorAll(".controles").forEach(grupo=>{grupo.querySelectorAll("button").forEach(botao=>{botao.addEventListener("click",()=>{grupo.querySelectorAll("button").forEach(b=>b.classList.remove("ativo"));botao.classList.add("ativo");});});});
+const imagens = {
+  robo: {
+    frente: "img/mecha.png",
+    direita: "img/mecha-d.png",
+    esquerda: "img/mecha-e.png",
+    costas: "img/mecha-a.png"
+  },
+
+  piloto: {
+    frente: "img/julia-frente.png",
+    direita: "img/julia-direita.png",
+    esquerda: "img/julia-esquerda.png",
+    costas: "img/julia-costas.png"
+  }
+};
+
+document.querySelectorAll(".controles").forEach(controles => {
+  const grupo = controles.dataset.grupo;
+
+  const imagem = grupo === "robo"
+    ? document.getElementById("img-robo")
+    : document.getElementById("img-piloto");
+
+  controles.querySelectorAll("button").forEach(botao => {
+    botao.addEventListener("click", () => {
+      const lado = botao.dataset.lado;
+
+      // Troca a imagem
+      imagem.src = imagens[grupo][lado];
+
+      // Atualiza o botão ativo
+      controles.querySelectorAll("button").forEach(b => {
+        b.classList.remove("ativo");
+      });
+
+      botao.classList.add("ativo");
+    });
+  });
+});
